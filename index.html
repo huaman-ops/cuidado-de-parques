@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plataforma Educativa: Cuidado de Parques</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0fdf4;
+    }
+    header {
+      background-color: #228b22;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #cce5cc;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: #155724;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+    }
+    footer {
+      background-color: #228b22;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    .modulo {
+      background-color: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 5px solid #2e7d32;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    /* Estilos para el contenido desplegable */
+    .info {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out, padding 0.3s;
+      background-color: #e8f5e9;
+      padding: 0 15px;
+      border-left: 4px solid #1b5e20;
+      border-radius: 5px;
+    }
+    .info.mostrar {
+      max-height: 500px;
+      padding: 15px;
+    }
+    .boton-toggle {
+      margin-top: 10px;
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌳 Plataforma Educativa: Cuidado de Parques</h1>
+  <p>Aprende, cuida y transforma los espacios verdes</p>
+</header>
+
+<nav>
+  <a href="#botanica">Botánica y Ecología</a>
+  <a href="#agua">Gestión del Agua</a>
+  <a href="#mantenimiento">Mantenimiento</a>
+  <a href="#diseno">Diseño de Parques</a>
+  <a href="#educacion">Educación Ambiental</a>
+  <a href="#residuos">Gestión de Residuos</a>
+  <a href="#juegos">Juegos y Actividades</a>
+</nav>
+
+<section id="botanica">
+  <div class="modulo">
+    <h2>🌱 Botánica y Ecología de Parques</h2>
+        <p><strong></strong> Taller de identificación de plantas. Los participantes aprenderán a reconocer y cuidar especies autóctonas del parque.</p>
+    <button class="boton-toggle" onclick="mostrarInfo(this)" data-target="contenidoBotanica">Actividad</button>
+    <div class="info" id="contenidoBotanica">
+      <p><strong></strong> Taller de polinizadores. Los participantes aprenderán sobre la importancia de las abejas y mariposas en el ecosistema del parque.</p>
+      <p><strong></strong> Taller de restauración de hábitats. Los participantes aprenderán sobre la rehabilitación de áreas degradadas y la restauración de ecosistemas.</p>
+      <p><strong></strong> Taller de diseño de jardines nativos. Los participantes aprenderán a crear jardines que fomenten la biodiversidad y utilicen plantas autóctonas.</p>
+      <p><strong></strong> Taller de huertos urbanos. Los participantes aprenderán a cultivar sus propios alimentos utilizando técnicas sostenibles y respetuosas con el medio ambiente.</p>
+      <p><strong></strong> Taller de arte ecológico. Los participantes aprenderán a crear obras de arte utilizando materiales reciclados y elementos naturales.</p>
+    </div>
+  </div>
+</section>
+
+<section id="agua">
+  <div class="modulo">
+    <h2>💧 Gestión de Recursos Hídricos</h2>
+        <p><strong></strong> Taller de estrategias sostenibles de riego, drenaje y conservación del agua para espacios verdes.</p>
+    <button class="boton-toggle" onclick="mostrarInfo(this)"   data-target="contenidoAgua">Actividad</button>
+    <div class="info" id="contenidoAgua">
+      <p><strong></strong> Taller de captación de agua de lluvia. Los participantes aprenderán a diseñar e implementar sistemas de recolección de agua de lluvia para riego
+        <button class="boton-toggle" onclick="toggleSub(this)">Mostrar</button>
+      <div class="subinfo" id="subinfoAgua">
+          <li><strong>Video:</strong> <a href="https://youtu.be/CusJatEze2w?si=Isi_5YWWccn73RWY" target="_blank">Sistema de recolección de agua de lluvia</a></li
+      <p><strong></strong> Taller de riego eficiente. Los participantes aprenderán a utilizar técnicas de riego por goteo y a programar sistemas de riego automatizados
+      <li><strong>PDF:</strong> <a href="https://example.com/manual_riego_sostenible.pdf" target="_blank">Manual de riego eficiente</a></li>
+      <p><strong></strong> Taller de conservación de humedales. Los participantes aprenderán sobre la importancia de los humedales y cómo protegerlos.</p>
+      <li><strong>Video:</strong> <a href="https://youtu.be/ExampleHumedales" target="_blank">Conservación de humedales</a></li>
+    </div>
+  </div>
+</section
+
+<section id="mantenimiento">
+  <div class="modulo">
+    <h2>🛠️ Mantenimiento y Conservación</h2>
+    <p><strong></strong> Taller de técnicas de cuidado y reparación sostenible de infraestructuras y jardines en parques urbanos.</p>
+    <button class="boton-toggle" onclick="mostrarInfo(this)"   data-target="contenidomantenimiento">Actividad</button>
+    <div class="info" id="contenidomantenimiento">
+      <p>Taller de reparación de mobiliario urbano. Los participantes aprenderán a reparar y mantener bancos, mesas y otros elementos del parque.</p>
+      <p>Taller de jardinería ecológica. Los participantes aprenderán técnicas de cultivo sostenible y cuidado de plantas nativas.</p>
+      <p>Taller de poda y mantenimiento de árboles. Los participantes aprenderán a podar y cuidar árboles de manera adecuada para su salud y crecimiento.</p>
+      <p>Taller de control de plagas y enfermedades. Los participantes aprenderán a identificar y manejar plagas y enfermedades comunes en parques.</p>
+      <p>Taller de restauración de suelos. Los participantes aprenderán técnicas para mejorar la salud del suelo y promover la biodiversidad en el parque.</p>
+    </div>
+  </div>
+</section>
+
+<section id="diseno">
+  <div class="modulo">
+    <h2>🏞️ Planificación y Diseño de Parques</h2>
+    <p><strong></strong> Taller de principios de diseño paisajístico, accesibilidad y planificación urbana verde.</p>
+    <button class="boton-toggle" onclick="mostrarInfo(this)"   data-target="contenidoplanificacion">Actividad</button>
+    <div class="info" id="contenidoplanificacion">
+      <p><strong></strong> Taller de diseño paisajístico. Los participantes aprenderán a planificar y diseñar espacios verdes que sean funcionales y estéticamente agradables.</p>
+      <p><strong></strong> En un taller práctico, se puede realizar una actividad de diseño participativo donde los asistentes propongan ideas para mejorar un parque local.</p>
+      <p><strong></strong> Taller de diseño de jardines verticales. Los participantes aprenderán a crear jardines verticales utilizando materiales reciclados y plantas nativas.</p>
+      <p><strong></strong> taller de diseno de espacios accesibles. Los participantes aprenderán a diseñar parques que sean inclusivos y accesibles para todas las personas.</p>
+      <p><strong></strong> taller de diseño de areas recreativas. Los participantes aprenderán a planificar y diseñar zonas de juegos y actividades al aire libre para fomentar la interacción social y el disfrute del entorno natural.</p>
+      <p><strong></strong>taller de planificación de áreas verdes urbanas. Los participantes aprenderán a integrar espacios verdes en entornos urbanos, considerando la biodiversidad y el bienestar de la comunidad.</p>
+    </div>
+  </div>
+</section>
+
+<section id="educacion">
+  <div class="modulo">
+    <h2>📚 Educación Ambiental y Participación Ciudadana</h2>
+    <p><strong></strong> Fomenta el compromiso ciudadano y la educación ecológica en entornos comunitarios.</p>
+    <button class="boton-toggle" onclick="mostrarInfo(this)"   data-target="contenidoseducacion">Actividad</button>
+    <div class="info" id="contenidoseducacion">
+      <p><strong></strong> Taller de reciclaje creativo. Los participantes aprenderán a reutilizar materiales para crear arte y objetos útiles.</p>
+      <p><strong></strong> Taller de compostaje. Los participantes aprenderán a crear su propia compostera y a reciclar residuos orgánicos.</p>
+      <p><strong></strong> Taller de huertos comunitarios. Los participantes aprenderán a cultivar sus propios alimentos y a compartir conocimientos sobre agricultura urbana.</p>
+      <p><strong></strong> Taller de educación ambiental. Los participantes aprenderán sobre la importancia de la conservación y cómo involucrar a la comunidad en acciones ecológicas.</p>
+      <p><strong></strong> Taller de arte ecológico. Los participantes aprenderán a crear obras de arte utilizando materiales reciclados y elementos naturales.</p>
+      <p><strong></strong> Taller de sostenibilidad en la vida diaria. Los participantes aprenderán prácticas sostenibles que pueden implementar en su hogar y comunidad.</p>
+      <p><strong></strong> Taller de conservación de la biodiversidad. Los participantes aprenderán sobre la importancia de proteger la flora y fauna local y cómo pueden contribuir a su conservación.</p>
+      <p><strong></strong> Taller de educación ambiental para niños. Los participantes aprenderán a diseñar actividades educativas para sensibilizar a los más pequeños sobre la naturaleza y el medio ambiente.</p>
+      <p><strong></strong> Taller de voluntariado ambiental. Los participantes aprenderán sobre oportunidades de voluntariado en proyectos de conservación y restauración de parques.</p>
+    </div>
+  </div>
+</section>
+
+<section id="residuos">
+  <div class="modulo">
+    <h2>♻️ Gestión de Residuos</h2>
+    <p><strong></strong> Taller de separación, reciclaje y reducción de residuos en espacios verdes urbanos.</p>
+    <button class="boton-toggle" onclick="mostrarInfo(this)" data-target="contenidoResiduos">Actividad</button>
+    <div class="info" id="contenidoResiduos">
+      <p><strong></strong> Taller de separación de residuos. Los participantes aprenderán a clasificar correctamente los residuos en orgánicos, reciclables y no reciclables.</p>
+      <p><strong></strong> Taller de compostaje comunitario. Los participantes aprenderán a crear una compostera y a reciclar residuos orgánicos para enriquecer el suelo del parque.</p>
+      <p><strong></strong> Taller de reutilización de materiales. Los participantes aprenderán a dar una segunda vida a objetos y materiales que normalmente se desecharían.</p>
+      <p><strong></strong> Taller de educación ambiental. Los participantes aprenderán sobre la importancia de la conservación y cómo involucrar a la comunidad en acciones ecológicas.</p>
+      <p><strong></strong> Taller de arte con residuos. Los participantes aprenderán a crear obras de arte utilizando materiales reciclados y elementos naturales.</p>
+      <p><strong></strong> Taller de sostenibilidad en la vida diaria. Los participantes aprenderán prácticas sostenibles que pueden implementar en su hogar y comunidad.</p>
+    </div>
+  </div>
+</section>
+
+<section id="juegos">
+  <div class="modulo">
+    <h2>🎲 Juegos y Actividades</h2>
+    <p><strong></strong> Ideas de juegos al aire libre y actividades educativas para fomentar el amor por la naturaleza en los más pequeños.</p>
+    <button class="boton-toggle" onclick="mostrarInfo(this)" data-target="contenidoJuegos">Actividad</button>
+    <div class="info" id="contenidoJuegos">
+      <p><strong></strong> Juego de roles “Guardaparques por un día”. Los participantes deben tomar decisiones ecológicas, guiar visitantes ficticios y resolver retos ambientales como parte del cuidado del parque.</p>
+      <li>🎥 <strong>Video:</strong> <a href="https://www.youtube.com/watch?v=b6cspF3MiV8" target="_blank">Juegos ecológicos para niños - canal Ecoplaneta</a></li>
+        <li>📊 <strong>Diapositivas:</strong> <a href="https://docs.google.com/presentation/d/1abcdEFGHIJ" target="_blank">Presentación: Actividades lúdicas ambientales</a></li>
+        <li>📄 <strong>Trabajo guía:</strong> <a href="https://drive.google.com/file/d/1TareaJuegoEcologico/view" target="_blank">Descargar actividad: Guardaparques por un día (PDF)</a></li>
+        <li>🧠 <strong>Investigación:</strong> <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=6781234" target="_blank">Artículo: El juego como estrategia educativa ambiental</a></li>
+        <li>📐 <strong>Plano de zona de juegos:</strong> <a href="https://drive.google.com/file/d/1PlanoZonaJuegosParque/view" target="_blank">Diseño de juegos en parques urbanos (PDF)</a></li>
+        <li>🧩 <strong>Juego interactivo:</strong> <a href="https://wordwall.net/es/resource/1234567/sopa-de-letras-parque" target="_blank">Sopa de letras interactiva: Cuidemos el parque</a></li>
+      </ul>
+      <p><strong></strong> Búsqueda del tesoro ecológica. Los participantes deben encontrar elementos naturales específicos, aprender sobre su importancia y completar tareas relacionadas con la conservación.</p>
+      <p><strong></strong> Juego de memoria ambiental. Los participantes deben emparejar imágenes de flora y fauna local, aprendiendo sobre su hábitat y características.</p>
+      <p><strong></strong>Juegos de mesa ecológicos. Los participantes aprenderán a crear y jugar juegos de mesa que promuevan la conciencia ambiental y la sostenibilidad.</p>
+      <p><strong></strong> Juego de sopas de letras ecológicas. Los participantes buscarán palabras relacionadas con la naturaleza y el medio ambiente, fomentando el aprendizaje lúdico.</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <p>&copy; 2025 Plataforma Educativa Verde | Diseñado por Glinng Addler Huamán Salvador</p>
+  <p>huamansalvadorglinngaddler@gmail.com</p>
+</footer>
+
+<script>
+  function mostrarInfo(boton) {
+    const targetId = boton.getAttribute("data-target");
+    const contenido = document.getElementById(targetId);
+    if (contenido) {
+      contenido.classList.toggle("mostrar");
+    }
+  }
+</script>
+
+</body>
+</html>
